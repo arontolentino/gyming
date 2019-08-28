@@ -63,4 +63,21 @@ ion-label {
 ion-tab {
   margin-top: 44px;
 }
+
+ion-tab-button {
+  background-color: #2699fb;
+  color: #fff;
+}
+
+.tab-selected {
+  background-color: #0089ff;
+}
+
+ion-label {
+  text-transform: uppercase;
+}
+
+.tab-selected ion-label {
+  font-weight: 700;
+}
 </style>

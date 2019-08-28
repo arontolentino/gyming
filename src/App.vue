@@ -6,3 +6,8 @@
   </div>
 </template>
 
+<style>
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+</style>
