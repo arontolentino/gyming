@@ -1,40 +1,50 @@
 <template>
-  <!-- Listen to before and after tab change events -->
-  <ion-tabs>
-    <ion-tab tab="home" :routes="'home'">
-      <Home />
-    </ion-tab>
+  <div>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Title</ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-    <ion-tab tab="history" :routes="'history'">
-      <History />
-    </ion-tab>
+    <!-- Listen to before and after tab change events -->
+    <div>
+      <ion-tabs>
+        <ion-tab tab="home" :routes="'home'">
+          <Home />
+        </ion-tab>
 
-    <ion-tab tab="progress" :routes="'progress'">
-      <Progress />
-    </ion-tab>
+        <ion-tab tab="history" :routes="'history'">
+          <History />
+        </ion-tab>
 
-    <ion-tab tab="calendar" :routes="'calendar'">
-      <Calendar />
-    </ion-tab>
+        <ion-tab tab="progress" :routes="'progress'">
+          <Progress />
+        </ion-tab>
 
-    <!-- Use v-slot:bottom with Vue ^2.6.0 -->
-    <template slot="bottom">
-      <ion-tab-bar>
-        <ion-tab-button tab="home" :to="{ name: 'home' }">
-          <ion-label>Home</ion-label>
-        </ion-tab-button>
-        <ion-tab-button tab="history" :to="{ name: 'history' }">
-          <ion-label>History</ion-label>
-        </ion-tab-button>
-        <ion-tab-button tab="progress" :to="{ name: 'progress' }">
-          <ion-label>Progress</ion-label>
-        </ion-tab-button>
-        <ion-tab-button tab="calendar" :to="{ name: 'calendar' }">
-          <ion-label>Calendar</ion-label>
-        </ion-tab-button>
-      </ion-tab-bar>
-    </template>
-  </ion-tabs>
+        <ion-tab tab="calendar" :routes="'calendar'">
+          <Calendar />
+        </ion-tab>
+
+        <!-- Use v-slot:bottom with Vue ^2.6.0 -->
+        <template slot="bottom">
+          <ion-tab-bar>
+            <ion-tab-button tab="home" :to="{ name: 'home' }">
+              <ion-label>Home</ion-label>
+            </ion-tab-button>
+            <ion-tab-button tab="history" :to="{ name: 'history' }">
+              <ion-label>History</ion-label>
+            </ion-tab-button>
+            <ion-tab-button tab="progress" :to="{ name: 'progress' }">
+              <ion-label>Progress</ion-label>
+            </ion-tab-button>
+            <ion-tab-button tab="calendar" :to="{ name: 'calendar' }">
+              <ion-label>Calendar</ion-label>
+            </ion-tab-button>
+          </ion-tab-bar>
+        </template>
+      </ion-tabs>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -57,5 +67,9 @@ export default {
 <style scoped>
 ion-label {
   height: 16px;
+}
+
+ion-tab {
+  margin-top: 44px;
 }
 </style>
