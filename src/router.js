@@ -1,9 +1,8 @@
 import Vue from 'vue';
 import Tabs from './views/Tabs';
-import Home from './views/Home';
-import History from './views/History';
+import Goals from './views/Goals';
+import Logs from './views/Logs';
 import Progress from './views/Progress';
-import Calendar from './views/Calendar';
 
 import { IonicVueRouter } from '@ionic/vue';
 
@@ -16,28 +15,23 @@ export default new IonicVueRouter({
     {
       path: '/',
       name: 'tabs',
-      redirect: 'home',
+      redirect: 'logs',
       component: Tabs,
       children: [
         {
-          path: 'home',
-          name: 'home',
-          component: Home
+          path: 'goals',
+          name: 'goals',
+          component: Goals
         },
         {
-          path: 'history',
-          name: 'history',
-          component: History
+          path: 'logs',
+          name: 'logs',
+          component: Logs
         },
         {
           path: 'progress',
           name: 'progress',
           component: Progress
-        },
-        {
-          path: 'calendar',
-          name: 'calendar',
-          component: Calendar
         }
       ]
     }

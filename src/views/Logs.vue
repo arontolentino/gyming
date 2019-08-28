@@ -3,7 +3,7 @@
     <ion-card>
       <ion-card-header>
         <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-        <ion-card-title>Calendar</ion-card-title>
+        <ion-card-title>Home</ion-card-title>
       </ion-card-header>
 
       <ion-card-content>
@@ -51,6 +51,9 @@
 
 <script>
 export default {
-  name: 'Calendar'
+  name: 'Home',
+  data: function() {
+    return {};
+  }
 };
 </script>
