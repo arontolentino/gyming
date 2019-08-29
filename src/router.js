@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Tabs from './views/Tabs';
 import Goals from './views/Goals';
+import LogsIndex from './views/LogsIndex';
 import Logs from './views/Logs';
 import Progress from './views/Progress';
 
@@ -26,6 +27,11 @@ export default new IonicVueRouter({
         {
           path: 'logs',
           name: 'logs',
+          component: LogsIndex
+        },
+        {
+          path: 'log',
+          name: 'log',
           component: Logs
         },
         {

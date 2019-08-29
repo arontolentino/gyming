@@ -23,7 +23,7 @@
       </ion-tab>
 
       <ion-tab tab="logs" :routes="'logs'">
-        <Logs />
+        <LogsIndex />
       </ion-tab>
 
       <ion-tab tab="progress" :routes="'progress'">
@@ -50,14 +50,14 @@
 
 <script>
 import Goals from './Goals';
-import Logs from './Logs';
+import LogsIndex from './LogsIndex';
 import Progress from './Progress';
 
 export default {
   name: 'tabs',
   components: {
     Goals,
-    Logs,
+    LogsIndex,
     Progress
   }
 };
