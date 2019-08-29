@@ -3,6 +3,17 @@
     <ion-header>
       <ion-toolbar>
         <ion-title>GYMING</ion-title>
+        <ion-buttons slot="primary">
+          <ion-button>
+            <i class="fas fa-plus"></i>
+          </ion-button>
+          <ion-button>
+            <i class="fas fa-user"></i>
+          </ion-button>
+          <ion-button>
+            <i class="fas fa-cog"></i>
+          </ion-button>
+        </ion-buttons>
       </ion-toolbar>
     </ion-header>
 
@@ -56,6 +67,27 @@ export default {
 </script>
 
 <style scoped>
+ion-toolbar {
+  color: #fff;
+  --background: #2699fb;
+  --min-height: 48px;
+}
+
+ion-title {
+  padding: 0 16px;
+  text-align: left;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+ion-buttons {
+  padding: 0 10px;
+}
+
+ion-toolbar ion-button {
+  color: #fff;
+}
+
 ion-label {
   height: 16px;
 }
