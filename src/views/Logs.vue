@@ -2,49 +2,63 @@
   <ion-content>
     <ion-card>
       <ion-card-header>
-        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-        <ion-card-title>Home</ion-card-title>
+        <ion-card-title>
+          INCLINE DB
+          BENCH PRESS
+        </ion-card-title>
       </ion-card-header>
 
       <ion-card-content>
-        Keep close to Nature's heart... and break clear away, once in awhile,
-        and climb a mountain or spend a week in the woods. Wash your spirit clean.
+        <div>
+          <ion-grid>
+            <ion-row class="stat-heading">
+              <ion-col>
+                <div>Set</div>
+              </ion-col>
+              <ion-col>
+                <div>Weight</div>
+              </ion-col>
+              <ion-col>
+                <div>Reps</div>
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="stat-entry">
+              <ion-col>
+                <div>1</div>
+              </ion-col>
+              <ion-col>
+                <div>225</div>
+              </ion-col>
+              <ion-col>
+                <div>12</div>
+              </ion-col>
+            </ion-row>
+            <ion-row class="stat-entry">
+              <ion-col>
+                <div>2</div>
+              </ion-col>
+              <ion-col>
+                <div>225</div>
+              </ion-col>
+              <ion-col>
+                <div>12</div>
+              </ion-col>
+            </ion-row>
+            <ion-row class="stat-entry">
+              <ion-col>
+                <div>3</div>
+              </ion-col>
+              <ion-col>
+                <div>225</div>
+              </ion-col>
+              <ion-col>
+                <div>12</div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
       </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-item>
-        <ion-icon name="pin" slot="start"></ion-icon>
-        <ion-label>ion-item in a card, icon left, button right</ion-label>
-        <ion-button fill="outline" slot="end">View</ion-button>
-      </ion-item>
-
-      <ion-card-content>
-        This is content, without any paragraph or header tags,
-        within an ion-card-content element.
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-item href="#" class="activated">
-        <ion-icon name="wifi" slot="start"></ion-icon>
-        <ion-label>Card Link Item 1 .activated</ion-label>
-      </ion-item>
-
-      <ion-item href="#">
-        <ion-icon name="wine" slot="start"></ion-icon>
-        <ion-label>Card Link Item 2</ion-label>
-      </ion-item>
-
-      <ion-item class="activated">
-        <ion-icon name="warning" slot="start"></ion-icon>
-        <ion-label>Card Button Item 1 .activated</ion-label>
-      </ion-item>
-
-      <ion-item>
-        <ion-icon name="walk" slot="start"></ion-icon>
-        <ion-label>Card Button Item 2</ion-label>
-      </ion-item>
     </ion-card>
   </ion-content>
 </template>
@@ -57,3 +71,35 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+ion-card {
+  display: block;
+}
+
+ion-card-title {
+  font-size: 17px;
+  text-align: center;
+  color: #ffa700;
+}
+
+ion-card-header {
+  padding-bottom: 0px;
+}
+
+ion-card-content {
+  padding: 2px;
+}
+
+.stat-heading {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: #2699fb;
+}
+
+.stat-entry {
+  font-size: 15px;
+  text-align: center;
+}
+</style>
