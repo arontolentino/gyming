@@ -2,7 +2,7 @@
   <ion-content>
     <ion-list>
       <ion-item-sliding>
-        <ion-item@click="buttonClick()">
+        <ion-item @click="buttonClick()">
           <ion-label>Chest/Triceps/Shoulders - August 29, 2019</ion-label>
         </ion-item>
         <ion-item-options side="end">
@@ -23,12 +23,11 @@
 </template>
 
 <script>
-
 export default {
   name: 'LogsIndex',
   methods: {
     buttonClick() {
-      this.$router.push({ name: 'log' });
+      this.$router.push({ name: 'logs' });
     }
   }
 };

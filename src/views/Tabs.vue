@@ -1,50 +1,53 @@
 <template>
   <div>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>GYMING</ion-title>
-        <ion-buttons slot="primary">
-          <ion-button>
-            <i class="fas fa-plus"></i>
-          </ion-button>
-          <ion-button>
-            <i class="fas fa-user"></i>
-          </ion-button>
-          <ion-button>
-            <i class="fas fa-cog"></i>
-          </ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
+    <div class="header">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>GYMING</ion-title>
+          <ion-buttons slot="primary">
+            <ion-button>
+              <i class="fas fa-plus"></i>
+            </ion-button>
+            <ion-button>
+              <i class="fas fa-user"></i>
+            </ion-button>
+            <ion-button>
+              <i class="fas fa-cog"></i>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+    </div>
 
-    <ion-tabs>
-      <ion-tab tab="goals" :routes="'goals'">
-        <Goals />
-      </ion-tab>
+    <div class="navigation">
+      <ion-tabs>
+        <ion-tab tab="/goals">
+          <ion-vue-router name="goals"></ion-vue-router>
+        </ion-tab>
 
-      <ion-tab tab="logs" :routes="'logs'">
-        <LogsIndex />
-      </ion-tab>
+        <ion-tab tab="/index">
+          <ion-vue-router name="index"></ion-vue-router>
+        </ion-tab>
 
-      <ion-tab tab="progress" :routes="'progress'">
-        <Progress />
-      </ion-tab>
+        <ion-tab tab="/progress">
+          <ion-vue-router name="progress"></ion-vue-router>
+        </ion-tab>
 
-      <!-- Use v-slot:bottom with Vue ^2.6.0 -->
-      <template slot="bottom">
-        <ion-tab-bar>
-          <ion-tab-button tab="goals" :to="{ name: 'goals' }">
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="/goals">
             <ion-label>Goals</ion-label>
           </ion-tab-button>
-          <ion-tab-button tab="logs" :to="{ name: 'logs' }">
+
+          <ion-tab-button tab="/index">
             <ion-label>Logs</ion-label>
           </ion-tab-button>
-          <ion-tab-button tab="progress" :to="{ name: 'progress' }">
+
+          <ion-tab-button tab="/progress">
             <ion-label>Progress</ion-label>
           </ion-tab-button>
         </ion-tab-bar>
-      </template>
-    </ion-tabs>
+      </ion-tabs>
+    </div>
   </div>
 </template>
 

@@ -4,15 +4,12 @@ import router from './router';
 import store from './store';
 
 import Ionic from '@ionic/vue';
-
-// Ionic core styles and theming
 import '@ionic/core/css/core.css';
 import '@ionic/core/css/ionic.bundle.css';
 
-// Use ionic/vue plugin
-Vue.use(Ionic);
-
 Vue.config.productionTip = false;
+
+Vue.use(Ionic);
 
 new Vue({
   router,

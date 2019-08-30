@@ -13,31 +13,37 @@ export default new IonicVueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+    { path: '/', redirect: '/tabs' },
+
     {
-      path: '/',
+      path: '/tabs',
       name: 'tabs',
-      redirect: 'logs',
-      component: Tabs,
+      component: () =>
+        import(/* webpackChunkName: "home" */ '@/views/Tabs.vue'),
       children: [
         {
-          path: 'goals',
-          name: 'goals',
-          component: Goals
+          path: '/index',
+          name: 'index',
+          components: {
+            index: () =>
+              import(/* webpackChunkName: "tab1" */ '@/views/LogsIndex.vue')
+          }
         },
         {
-          path: 'logs',
+          path: '/index/logs',
           name: 'logs',
-          component: LogsIndex
+          components: {
+            index: () =>
+              import(/* webpackChunkName: "tab1" */ '@/views/Logs.vue')
+          }
         },
         {
-          path: 'log',
-          name: 'log',
-          component: Logs
-        },
-        {
-          path: 'progress',
-          name: 'progress',
-          component: Progress
+          path: '/tab2',
+          name: 'tab2',
+          components: {
+            tab2: () =>
+              import(/* webpackChunkName: "tab2" */ '@/views/Tab2.vue')
+          }
         }
       ]
     }
