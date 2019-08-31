@@ -40,10 +40,7 @@ export default new IonicVueRouter({
         {
           path: '/tab2',
           name: 'tab2',
-          components: {
-            tab2: () =>
-              import(/* webpackChunkName: "tab2" */ '@/views/Tab2.vue')
-          }
+          components: {}
         }
       ]
     }
