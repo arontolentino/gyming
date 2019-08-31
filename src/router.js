@@ -1,9 +1,4 @@
 import Vue from 'vue';
-import Tabs from './views/Tabs';
-import Goals from './views/Goals';
-import LogsIndex from './views/LogsIndex';
-import Logs from './views/Logs';
-import Progress from './views/Progress';
 
 import { IonicVueRouter } from '@ionic/vue';
 
@@ -22,25 +17,28 @@ export default new IonicVueRouter({
         import(/* webpackChunkName: "home" */ '@/views/Tabs.vue'),
       children: [
         {
-          path: '/index',
-          name: 'index',
+          path: '/track',
+          name: 'track',
           components: {
-            index: () =>
-              import(/* webpackChunkName: "tab1" */ '@/views/LogsIndex.vue')
+            track: () =>
+              import(/* webpackChunkName: "tab1" */ '@/views/Track.vue')
           }
         },
         {
-          path: '/index/logs',
-          name: 'logs',
+          path: '/calendar',
+          name: 'calendar',
           components: {
-            index: () =>
-              import(/* webpackChunkName: "tab1" */ '@/views/Logs.vue')
+            calendar: () =>
+              import(/* webpackChunkName: "tab1" */ '@/views/Calendar.vue')
           }
         },
         {
-          path: '/tab2',
-          name: 'tab2',
-          components: {}
+          path: '/history',
+          name: 'history',
+          components: {
+            history: () =>
+              import(/* webpackChunkName: "tab1" */ '@/views/History.vue')
+          }
         }
       ]
     }
