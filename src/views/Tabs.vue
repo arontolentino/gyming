@@ -1,68 +1,39 @@
 <template>
-  <div>
-    <div class="header">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>GYMING</ion-title>
-          <ion-buttons slot="primary">
-            <ion-button>
-              <i class="fas fa-plus"></i>
-            </ion-button>
-            <ion-button>
-              <i class="fas fa-user"></i>
-            </ion-button>
-            <ion-button>
-              <i class="fas fa-cog"></i>
-            </ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
-    </div>
+  <div class="navigation">
+    <ion-tabs>
+      <ion-tab tab="/track">
+        <ion-vue-router name="track"></ion-vue-router>
+      </ion-tab>
 
-    <div class="navigation">
-      <ion-tabs>
-        <ion-tab tab="/goals">
-          <ion-vue-router name="goals"></ion-vue-router>
-        </ion-tab>
+      <ion-tab tab="/history">
+        <ion-vue-router name="history"></ion-vue-router>
+      </ion-tab>
 
-        <ion-tab tab="/index">
-          <ion-vue-router name="index"></ion-vue-router>
-        </ion-tab>
+      <ion-tab tab="/calendar">
+        <ion-vue-router name="calendar"></ion-vue-router>
+      </ion-tab>
 
-        <ion-tab tab="/progress">
-          <ion-vue-router name="progress"></ion-vue-router>
-        </ion-tab>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="/track">
+          <ion-label>Track</ion-label>
+        </ion-tab-button>
 
-        <ion-tab-bar slot="bottom">
-          <ion-tab-button tab="/goals">
-            <ion-label>Goals</ion-label>
-          </ion-tab-button>
+        <ion-tab-button tab="/history">
+          <ion-label>History</ion-label>
+        </ion-tab-button>
 
-          <ion-tab-button tab="/index">
-            <ion-label>Logs</ion-label>
-          </ion-tab-button>
-
-          <ion-tab-button tab="/progress">
-            <ion-label>Progress</ion-label>
-          </ion-tab-button>
-        </ion-tab-bar>
-      </ion-tabs>
-    </div>
+        <ion-tab-button tab="/calendar">
+          <ion-label>Calendar</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
   </div>
 </template>
 
 <script>
-import Goals from './Goals';
-import LogsIndex from './LogsIndex';
-import Progress from './Progress';
-
 export default {
   name: 'tabs',
-  components: {
-    Goals,
-    LogsIndex,
-    Progress
-  }
+  components: {}
 };
 </script>
 
@@ -90,10 +61,6 @@ ion-toolbar ion-button {
 
 ion-label {
   height: 16px;
-}
-
-ion-tab {
-  margin-top: 44px;
 }
 
 ion-tab-button {
