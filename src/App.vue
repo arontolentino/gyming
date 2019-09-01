@@ -1,7 +1,13 @@
 <template>
   <div id="app">
     <ion-app>
-      <ion-vue-router />
+      <v-app>
+        <v-content>
+          <v-container fluid>
+            <ion-vue-router />
+          </v-container>
+        </v-content>
+      </v-app>
     </ion-app>
   </div>
 </template>
