@@ -1,11 +1,12 @@
 <template>
   <ion-content class="ion-padding">
-    <WorkoutCard />
+    <WorkoutList />
   </ion-content>
 </template>
 
 <script>
-import WorkoutCard from './../components/WorkoutCard';
+import WorkoutCard from '@/components/WorkoutCard';
+import WorkoutList from '@/components/WorkoutList';
 
 export default {
   name: 'Home',
@@ -13,7 +14,8 @@ export default {
     return {};
   },
   components: {
-    WorkoutCard
+    WorkoutCard,
+    WorkoutList
   }
 };
 </script>

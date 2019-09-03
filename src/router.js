@@ -21,7 +21,7 @@ export default new IonicVueRouter({
           name: 'track',
           components: {
             track: () =>
-              import(/* webpackChunkName: "tab1" */ '@/views/Track.vue')
+              import(/* webpackChunkName: "tab1" */ '@/views/Track/Track.vue')
           }
         },
         {
@@ -29,7 +29,9 @@ export default new IonicVueRouter({
           name: 'calendar',
           components: {
             calendar: () =>
-              import(/* webpackChunkName: "tab1" */ '@/views/Calendar.vue')
+              import(
+                /* webpackChunkName: "tab1" */ '@/views/Calendar/Calendar.vue'
+              )
           }
         },
         {
@@ -37,7 +39,9 @@ export default new IonicVueRouter({
           name: 'history',
           components: {
             history: () =>
-              import(/* webpackChunkName: "tab1" */ '@/views/History.vue')
+              import(
+                /* webpackChunkName: "tab1" */ '@/views/History/History.vue'
+              )
           }
         }
       ]
