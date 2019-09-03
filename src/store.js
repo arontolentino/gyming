@@ -10,6 +10,13 @@ export default new Vuex.Store({
     user: null,
     isAuthenticated: false
   },
+
+  getters: {
+    isAuthenticated(state) {
+      return state.user !== null && state.user !== undefined;
+    }
+  },
+
   mutations: {
     setUser(state, payload) {
       state.user = payload;
@@ -18,6 +25,7 @@ export default new Vuex.Store({
       state.isAuthenticated = payload;
     }
   },
+
   actions: {
     signUp({ commit }, { email, password }) {
       firebase
