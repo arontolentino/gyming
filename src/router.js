@@ -9,7 +9,22 @@ export default new IonicVueRouter({
   base: process.env.BASE_URL,
   routes: [
     { path: '/', redirect: '/tabs' },
-
+    {
+      path: '/sign-in',
+      name: 'sign-in',
+      component: () =>
+        import(
+          /* webpackChunkName: "home" */ '@/views/Authentication/SignIn.vue'
+        )
+    },
+    {
+      path: '/sign-up',
+      name: 'sign-up',
+      component: () =>
+        import(
+          /* webpackChunkName: "home" */ '@/views/Authentication/SignUp.vue'
+        )
+    },
     {
       path: '/tabs',
       name: 'tabs',
