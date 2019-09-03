@@ -26,7 +26,23 @@ export default new Vuex.Store({
         .then(user => {
           commit('setUser', user);
           commit('setIsAuthenticated', true);
-          router.push('/tabs');
+          router.push('/sign-in');
+        })
+        .catch(error => {
+          commit('setUser', null);
+          commit('setIsAuthenticated', false);
+          console.log(error);
+        });
+    },
+
+    logIn({ commit }, { email, password }) {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(email, password)
+        .then(user => {
+          commit('setUser', user);
+          commit('setIsAuthenticated', true);
+          router.push('/track');
         })
         .catch(error => {
           commit('setUser', null);
