@@ -13,6 +13,7 @@
     "@ionic/core": "4.4.2",
     "@ionic/vue": "0.0.9",
     "core-js": "^2.6.5",
+    "firebase": "^6.5.0",
     "ionicons": "^4.6.3",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
