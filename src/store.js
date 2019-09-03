@@ -49,6 +49,22 @@ export default new Vuex.Store({
           commit('setIsAuthenticated', false);
           console.log(error);
         });
+    },
+
+    signOut({ commit }) {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          commit('setUser', null);
+          commit('setIsAuthenticated', false);
+          router.push('/log-in');
+        })
+        .catch(() => {
+          commit('setUser', null);
+          commit('setIsAuthenticated', false);
+          router.push('/log-in');
+        });
     }
   }
 });
