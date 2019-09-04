@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import firebase from 'firebase';
 import router from '@/router';
+
+const fb = require('./firebase/index.js');
 
 Vue.use(Vuex);
 
@@ -28,8 +29,7 @@ export default new Vuex.Store({
 
   actions: {
     signUp({ commit }, { email, password }) {
-      firebase
-        .auth()
+      fb.auth
         .createUserWithEmailAndPassword(email, password)
         .then(user => {
           commit('setUser', user);
@@ -44,8 +44,7 @@ export default new Vuex.Store({
     },
 
     logIn({ commit }, { email, password }) {
-      firebase
-        .auth()
+      fb.auth
         .signInWithEmailAndPassword(email, password)
         .then(user => {
           commit('setUser', user);
@@ -60,8 +59,7 @@ export default new Vuex.Store({
     },
 
     signOut({ commit }) {
-      firebase
-        .auth()
+      fb.auth
         .signOut()
         .then(() => {
           commit('setUser', null);

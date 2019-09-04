@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import 'firebase/firestore';
 
 var firebaseConfig = {
   apiKey: 'AIzaSyAILT1a9iVww71noaYH1oPs3hstMfgEg8U',
@@ -12,3 +13,13 @@ var firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+// firebase utils
+const db = firebase.firestore();
+const auth = firebase.auth();
+const currentUser = auth.currentUser;
+
+// firebase collections
+const workoutsCollection = db.collection('workouts');
+
+export { db, auth, currentUser, workoutsCollection };
