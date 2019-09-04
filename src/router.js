@@ -10,19 +10,19 @@ export default new IonicVueRouter({
   routes: [
     { path: '/', redirect: '/tabs' },
     {
-      path: '/sign-in',
-      name: 'sign-in',
+      path: '/login',
+      name: 'login',
       component: () =>
         import(
-          /* webpackChunkName: "home" */ '@/views/Authentication/SignIn.vue'
+          /* webpackChunkName: "home" */ '@/views/Authentication/Login.vue'
         )
     },
     {
-      path: '/sign-up',
-      name: 'sign-up',
+      path: '/register',
+      name: 'register',
       component: () =>
         import(
-          /* webpackChunkName: "home" */ '@/views/Authentication/SignUp.vue'
+          /* webpackChunkName: "home" */ '@/views/Authentication/Register.vue'
         )
     },
     {
@@ -32,11 +32,11 @@ export default new IonicVueRouter({
         import(/* webpackChunkName: "home" */ '@/views/Tabs.vue'),
       children: [
         {
-          path: '/track',
-          name: 'track',
+          path: '/entries',
+          name: 'entries',
           components: {
-            track: () =>
-              import(/* webpackChunkName: "tab1" */ '@/views/Track/Track.vue')
+            entries: () =>
+              import(/* webpackChunkName: "tab1" */ '@/views/Track/Entries.vue')
           }
         },
         {

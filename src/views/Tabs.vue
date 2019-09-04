@@ -1,8 +1,8 @@
 <template>
   <div class="navigation">
     <ion-tabs>
-      <ion-tab tab="/track">
-        <ion-vue-router name="track"></ion-vue-router>
+      <ion-tab tab="/entries">
+        <ion-vue-router name="entries"></ion-vue-router>
       </ion-tab>
 
       <ion-tab tab="/history">
@@ -14,8 +14,8 @@
       </ion-tab>
 
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="/track">
-          <ion-label>Track</ion-label>
+        <ion-tab-button tab="/entries">
+          <ion-label>Entries</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="/history">
