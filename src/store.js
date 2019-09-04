@@ -71,6 +71,19 @@ export default new Vuex.Store({
           commit('setIsAuthenticated', false);
           router.push('/log-in');
         });
+    },
+
+    addEntry({ state }, { date, name, count }) {
+      fb.workoutsCollection
+        .add({
+          date,
+          name,
+          count,
+          uid: state.user.user.uid
+        })
+        .then(() => {
+          console.log('Success!');
+        });
     }
   }
 });

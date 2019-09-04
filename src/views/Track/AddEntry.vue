@@ -40,7 +40,12 @@ export default {
   },
   methods: {
     addEntry() {
-      console.log(this.$store.state.user.user.uid);
+      this.$store.dispatch('addEntry', {
+        date: this.date,
+        name: this.name,
+        count: this.count
+      });
+      //   console.log(this.$store.state.user.user.uid);
       //   fb.workoutsCollection.add({
       //     createdOn: this.date,
       //     name: this.name,
