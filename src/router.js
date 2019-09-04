@@ -8,7 +8,7 @@ export default new IonicVueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-    { path: '/', redirect: '/tabs' },
+    { path: '/', redirect: '/login' },
     {
       path: '/login',
       name: 'login',
@@ -37,6 +37,16 @@ export default new IonicVueRouter({
           components: {
             entries: () =>
               import(/* webpackChunkName: "tab1" */ '@/views/Track/Entries.vue')
+          }
+        },
+        {
+          path: '/entries/add',
+          name: 'add-entry',
+          components: {
+            entries: () =>
+              import(
+                /* webpackChunkName: "tab1" */ '@/views/Track/AddEntry.vue'
+              )
           }
         },
         {
