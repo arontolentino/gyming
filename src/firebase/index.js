@@ -1,6 +1,8 @@
 import firebase from 'firebase';
+import 'firebase/firestore';
 
-var firebaseConfig = {
+// Firebase init
+const config = {
   apiKey: 'AIzaSyAILT1a9iVww71noaYH1oPs3hstMfgEg8U',
   authDomain: 'gyming-app.firebaseapp.com',
   databaseURL: 'https://gyming-app.firebaseio.com',
@@ -10,5 +12,14 @@ var firebaseConfig = {
   appId: '1:283119908064:web:0be69afb6f078b62'
 };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(config);
+
+// firebase utilities
+const db = firebase.firestore();
+const auth = firebase.auth();
+const currentUser = auth.currentUser;
+
+// firebase collections
+const workoutsCollection = db.collection('workouts');
+
+export { db, auth, currentUser, workoutsCollection };

@@ -8,8 +8,6 @@ import '@ionic/core/css/core.css';
 import '@ionic/core/css/ionic.bundle.css';
 import vuetify from './plugins/vuetify';
 
-import '@/firebase/index.js';
-
 Vue.config.productionTip = false;
 
 Vue.use(Ionic);
