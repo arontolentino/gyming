@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: 'SignInp',
+  name: 'SignIn',
   data() {
     return {
       valid: false,

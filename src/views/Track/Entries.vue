@@ -1,5 +1,16 @@
 <template>
   <ion-content class="ion-padding">
+    <v-card class="mx-auto mb-5" max-width="344" outlined>
+      <v-list-item two-line>
+        <v-list-item-content>
+          <v-list-item-title class="headline mb-1">Add Workout</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-card-actions>
+        <v-btn text @click="$router.push('entries/add')">Add</v-btn>
+      </v-card-actions>
+    </v-card>
     <v-card
       class="mx-auto mb-5"
       max-width="344"

@@ -47,9 +47,10 @@ export default new Vuex.Store({
       fb.auth
         .signInWithEmailAndPassword(email, password)
         .then(user => {
+          console.log(user);
           commit('setUser', user);
           commit('setIsAuthenticated', true);
-          router.push('/track');
+          router.push('/entries');
         })
         .catch(error => {
           commit('setUser', null);
@@ -74,6 +75,7 @@ export default new Vuex.Store({
     },
 
     addEntry({ state }, { date, name, count }) {
+      console.log(state.user);
       fb.workoutsCollection
         .add({
           date,
