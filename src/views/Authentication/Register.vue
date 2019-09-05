@@ -6,6 +6,7 @@
       </v-toolbar>
       <v-card-text style="width: auto">
         <v-form ref="form" v-model="valid" lazy-validation>
+          <v-text-field name="username" label="Username" type="text" v-model="username" required></v-text-field>
           <v-text-field
             name="email"
             label="Email"
@@ -39,6 +40,7 @@ export default {
   data() {
     return {
       valid: false,
+      username: '',
       email: '',
       password: '',
       emailRules: [
@@ -55,6 +57,7 @@ export default {
     submit() {
       if (this.$refs.form.validate()) {
         this.$store.dispatch('signUp', {
+          username: this.username,
           email: this.email,
           password: this.password
         });

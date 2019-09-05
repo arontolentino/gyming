@@ -28,12 +28,24 @@ export default new Vuex.Store({
   },
 
   actions: {
-    signUp({ commit }, { email, password }) {
+    signUp({ commit, state }, { username, email, password }) {
       fb.auth
         .createUserWithEmailAndPassword(email, password)
         .then(user => {
           commit('setUser', user);
           commit('setIsAuthenticated', true);
+          console.log('User registered!');
+
+          fb.usersCollection
+            .doc(state.user.user.uid)
+            .set({
+              username,
+              email
+            })
+            .then(() => {
+              console.log('Additional user details added!');
+            });
+
           router.push('/sign-in');
         })
         .catch(error => {

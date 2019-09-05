@@ -21,5 +21,6 @@ const currentUser = auth.currentUser;
 
 // firebase collections
 const workoutsCollection = db.collection('workouts');
+const usersCollection = db.collection('users');
 
-export { db, auth, currentUser, workoutsCollection };
+export { db, auth, currentUser, workoutsCollection, usersCollection };
